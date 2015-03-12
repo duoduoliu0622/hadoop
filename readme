@@ -1,0 +1,19 @@
+1, Install on Linux
+http://docs.hortonworks.com/HDPDocuments/HDP1/HDP-1.3.2/bk_using_Ambari_book/content/ambari-chap1-2.html
+1), http://sourceforge.net/projects/pdsh/files/pdsh/pdsh-2.26/
+tar xvjf xxx.tar.bz2
+
+2),  
+http://hadoop.apache.org/docs/r2.5.0/hadoop-project-dist/hadoop-common/SingleCluster.html#Standalone_Operation
+etc/hadoop/hadoop-env.sh updated JAVA_HOME
+
+3), install on OS X.
+http://www.talendbyexample.com/install-hadoop-os-x.html
+
+
+problem:
+1, zip -d wordcount.jar META-INF/LICENSE
+2, removed all the permission check.   etc/hadoop/hdfs-site.xml   :
+<property><name>dfs.permissions</name> <value>false</value></property>
+
+or run jar by: sudo -u kelinliu hadoop jar xx.jar……...
