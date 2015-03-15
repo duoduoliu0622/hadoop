@@ -15,5 +15,10 @@ problem:
 1, zip -d wordcount.jar META-INF/LICENSE
 2, removed all the permission check.   etc/hadoop/hdfs-site.xml   :
 <property><name>dfs.permissions</name> <value>false</value></property>
-
 or run jar by: sudo -u kelinliu hadoop jar xx.jar……...
+
+3.In conf/hdfs-site.xml, you should have a property like, or reboot will lost all node info.
+<property>
+    <name>dfs.name.dir</name>
+    <value>/home/user/hadoop/name/data</value>
+ </property>
